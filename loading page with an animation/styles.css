@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-container {
+    text-align: center;
+  }
+  
+  .loading-text {
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #00ff00;
+  }
+  
+  .letter {
+    animation: fadeInOut 1.2s ease infinite;
+  }
+  
+  .letter:nth-child(2) { animation-delay: 0.1s; }
+  .letter:nth-child(3) { animation-delay: 0.2s; }
+  .letter:nth-child(4) { animation-delay: 0.3s; }
+  .letter:nth-child(5) { animation-delay: 0.4s; }
+  .letter:nth-child(6) { animation-delay: 0.5s; }
+  .letter:nth-child(7) { animation-delay: 0.6s; }
+  
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  .blinking-cursor {
+    font-weight: 100;
+    font-size: 40px;
+    color: #00ff00;
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 0 }
+    50% { opacity: 1 }
+  }
+  
+  /* Code Rain */
+  .binary-code {
+    list-style: none;
+    padding: 0;
+    color: #00ff00;
+    overflow: hidden;
+    line-height: 1.5;
+  }
+  
+  .binary-code li {
+    font-size: 24px;
+    margin: 0;
+    animation: codeRain 1.5s linear infinite;
+    opacity: 0;
+  }
+  
+  @keyframes codeRain {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
+  
+  .binary-code li:nth-child(1) { animation-delay: 0s; }
+  .binary-code li:nth-child(2) { animation-delay: 0.1s; }
+  .binary-code li:nth-child(3) { animation-delay: 0.2s; }
+  .binary-code li:nth-child(4) { animation-delay: 0.3s; }
+  .binary-code li:nth-child(5) { animation-delay: 0.4s; }
+  .binary-code li:nth-child(6) { animation-delay: 0.5s; }
+  
